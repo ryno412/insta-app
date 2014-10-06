@@ -2,8 +2,14 @@
 <head>
     <link rel="stylesheet"  href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/main.css">
-    <script id="view-one" type="text">
-           <h1>hello \{{name}}</h1>
+    <script id="photos" type="text/x-handlebars-template">
+        <h1>Photos go here \{{title}}</h1>
+        <ul class="img-list">
+            \{{#each images}}
+            <li class="insta-img"><img src=\{{images.thumbnail.url}} /></li>
+            \{{/each}}
+        </ul>
+
     </script>
 </head>
 <body>
