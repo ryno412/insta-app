@@ -25,11 +25,17 @@ var express         = require('express'),
     app.use(cookieParser('H3R0'));
 
 
+
+
 app.route('/').all().get(function (req, res) {
         res.render('index');
 });
 app.route('/page').get(function (req, res) {
     res.render('page')
+});
+
+app.route('/bar/*').get(function (req, res) {
+    res.render('index')
 });
 
 
